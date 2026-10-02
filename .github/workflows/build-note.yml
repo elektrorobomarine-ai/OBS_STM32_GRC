@@ -1,0 +1,19 @@
+name: Firmware Repository Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f VERSION
+          test -f App/Inc/app_config.h
+          test -f Drivers/Board/Src/board_adc.c
+          test -f Middleware/OBS/Src/obs_protocol.c
+          echo "Repository structure OK"

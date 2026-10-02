@@ -1,0 +1,32 @@
+# STM32CubeIDE
+Debug/
+Release/
+*.launch
+.metadata/
+.settings/
+*.d
+*.o
+*.su
+*.cyclo
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.log
+
+# IDE user state
+.project
+.cproject
+.mxproject
+
+# Optional: keep .ioc tracked!
+# Do NOT ignore *.ioc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated temporary USB/log files
+logs/
+*.tmp
